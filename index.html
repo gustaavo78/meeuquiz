@@ -8,12 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Google Analytics 4 (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJEBGDMKYD"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXQS331J47"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-VJEBGDMKYD');
+      gtag('config', 'G-CXQS331J47');
 
       // Função de rastreamento de eventos aprimorada
       function trackEvent(eventName, eventParams) {
@@ -3512,44 +3512,18 @@ function updateCountdown() {
     const minutes = Math.floor(secondsLeft / 60);
     const seconds = secondsLeft % 60;
     
+    countdownElement.textContent = `${minutes.
+                                      function updateCountdown() {
+    const countdownElement = document.getElementById('discount-countdown');
+    
+    if (!countdownElement) return;
+    
+    const minutes = Math.floor(secondsLeft / 60);
+    const seconds = secondsLeft % 60;
+    
     countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
-// Copy text to clipboard
-function copyToClipboard(text) {
-    // Create temporary element
-    const el = document.createElement('textarea');
-    el.value = text;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-}
-
-// Show copied message
-function showCopiedMessage() {
-    const copiedMessage = document.getElementById('copied-message');
-    
-    if (!copiedMessage) return;
-    
-    copiedMessage.classList.add('show');
-    
-    setTimeout(() => {
-        copiedMessage.classList.remove('show');
-    }, 1500);
-}
-
-// Copy coupon and redirect to WhatsApp
-function copyCouponAndRedirect() {
-    copyToClipboard('AMAZ35');
-    showCopiedMessage();
-    
-    // Close popup and redirect after a short delay
-    setTimeout(() => {
-        closeDiscountPopup();
-        sendWhatsAppMessage(3); // Force kit 3 when using coupon
-    }, 1000);
-}
 // Copy text to clipboard
 function copyToClipboard(text) {
     // Create temporary element
